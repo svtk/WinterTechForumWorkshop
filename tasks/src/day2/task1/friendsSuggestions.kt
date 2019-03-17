@@ -33,7 +33,8 @@ class Person(
 }
 
 fun getFriendSuggestions(person: Person): Set<Person> {
-    TODO()
+    return (person.friends.flatMap { it.friends }.toSet()
+            - person.friends - person)
 }
 
 fun main() {

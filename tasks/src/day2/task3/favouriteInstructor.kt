@@ -11,5 +11,9 @@ if a student took no classes at all yet, `null` is returned.
 */
 
 fun School.findFavouriteInstructorForStudent(student: Student): Instructor? {
-    TODO()
+    return lessons
+        .filter { student in it.students }
+        .groupBy { it.instructor }
+        .maxBy { (_, lessons) -> lessons.size }
+        ?.key
 }
