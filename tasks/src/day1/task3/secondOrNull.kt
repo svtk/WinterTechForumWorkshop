@@ -8,10 +8,10 @@ Implement `secondOrNull` as an extension function
 and `penultimateOrNull` as an extension property.
  */
 fun <T> List<T>.secondOrNull(): T? =
-    TODO()
+    getOrNull(1)
 
 val <T> List<T>.penultimateOrNull: T?
-    get() = TODO()
+    get() = getOrNull(size - 2)
 
 fun main() {
     val strings = listOf("a", "b", "c", "d")

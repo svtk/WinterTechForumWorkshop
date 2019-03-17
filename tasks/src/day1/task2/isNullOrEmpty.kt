@@ -8,7 +8,7 @@ Note that the Kotlin standard library contains the same function.
 */
 
 fun String?.isNullOrEmpty(): Boolean =
-    TODO()
+    this == null || isEmpty()
 
 fun main() {
     val s1: String? = null
