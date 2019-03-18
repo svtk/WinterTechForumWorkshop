@@ -10,6 +10,6 @@ fun String.isValidIdentifier(): Boolean {
 }
 
 fun main() {
-    println("name".isValidIdentifier())
-    println("0name".isValidIdentifier())
+    println("name".isValidIdentifier())  // true
+    println("0name".isValidIdentifier()) // false
 }
