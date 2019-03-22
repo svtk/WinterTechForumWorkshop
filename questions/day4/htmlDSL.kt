@@ -4,7 +4,8 @@ open class Tag(val name: String) {
     private val children = mutableListOf<Tag>()
 
     protected fun <T : Tag> doInit(child: T, init: T.() -> Unit) {
-        // TODO
+        child.init()
+        children.add(child)
     }
 
     override fun toString() =
